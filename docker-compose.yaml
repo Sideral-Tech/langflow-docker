@@ -9,3 +9,8 @@ services:
     volumes:
       - /data/langflow/data:/home/langflow/.cache/langflow
       - /data/langflow/logs:/home/langflow/app/logs
+    environment:
+      - LANGFLOW_AUTO_LOGIN=False
+      - LANGFLOW_SUPERUSER=MyAdminUsername
+      - LANGFLOW_SUPERUSER_PASSWORD=MySuperSecretPasswordOmg11!
+      - LANGFLOW_SECRET_KEY=GenerateOneWithOpensslRandBase64
