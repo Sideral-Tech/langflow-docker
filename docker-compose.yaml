@@ -1,0 +1,11 @@
+
+version: '3.8'
+services:
+  langflow:
+    image: Sideral-tech/langflow-docker:latest
+    restart: unless-stopped
+    ports:
+      - 127.0.0.1:7860:7860
+    volumes:
+      - /data/langflow/data:/home/langflow/.cache/langflow
+      - /data/langflow/logs:/home/langflow/app/logs
